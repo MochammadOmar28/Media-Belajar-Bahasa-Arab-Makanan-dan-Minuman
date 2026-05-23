@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>بالعربية — Makanan & Minuman</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="particles"></div>
+
+<!-- HOME -->
+<div id="s-home" class="screen active">
+  <div class="food-ring">
+    <div class="fr">🍚</div><div class="fr">☕</div><div class="fr">🥗</div>
+    <div class="fr">🍵</div><div class="fr">🍖</div><div class="fr">🥤</div>
+    <div class="fr">🍞</div><div class="fr">🫖</div><div class="fr">🍳</div>
+    <div class="fr">🥘</div><div class="fr">🍰</div><div class="fr">🥛</div>
+    <div class="fr">🍹</div><div class="fr">🍗</div><div class="fr">🧀</div>
+    <div class="fr">🥩</div>
+  </div>
+  <div class="home-wrap">
+    <div class="badge"><span>الطَّعَام وَالشَّرَاب</span></div>
+    <h1 class="htlar">تَعَلَّم الْعَرَبِيَّة</h1>
+    <div class="htlid">Belajar Bahasa Arab</div>
+    <p class="hsub">Media Pembelajaran Interaktif · Makanan &amp; Minuman<br/>untuk Siswa SMA · Bahasa Arab Fusha</p>
+    <div class="hmenu">
+      <button class="mbtn mbtn-mat" onclick="go('s-materi')">
+        <span class="mbtn-ic">📖</span>
+        <span class="mbtn-ar">المَوَادّ</span>
+        <span class="mbtn-id">Materi Kosakata</span>
+      </button>
+      <button class="mbtn mbtn-lat" onclick="go('s-latihan')">
+        <span class="mbtn-ic">✏️</span>
+        <span class="mbtn-ar">التَّمْرِينَات</span>
+        <span class="mbtn-id">Latihan Soal</span>
+      </button>
+      <button class="mbtn mbtn-bon" onclick="go('s-game')">
+        <span class="mbtn-ic">🎮</span>
+        <span class="mbtn-ar">الْمُحْتَوى الإِضَافِي</span>
+        <span class="mbtn-id">Bonus: Mini Game Arah</span>
+        <span class="mbtn-new">NEW!</span>
+      </button>
+    </div>
+    <div class="hfoot">🌙 Tingkat SMA &nbsp;|&nbsp; 📚 Arab Fusha &nbsp;|&nbsp; 3 Mode Belajar</div>
+  </div>
+</div>
+
+<!-- MATERI -->
+<div id="s-materi" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-home')">← Kembali</button>
+    <div class="hdrtit">المَوَادّ <small>Materi</small></div>
+  </div>
+  <div class="mwrap">
+    <button class="mch mc-ism" onclick="go('s-isim')">
+      <div class="mc-ic">🏷️</div>
+      <div class="mc-ar">الأَسْمَاء</div>
+      <div class="mc-id">Mufrodat Isim</div>
+      <div class="mc-ds">Kosakata benda: makanan, minuman, peralatan makan</div>
+    </button>
+    <button class="mch mc-fii" onclick="go('s-fiil')">
+      <div class="mc-ic">⚡</div>
+      <div class="mc-ar">الأَفْعَال</div>
+      <div class="mc-id">Mufrodat Fi'il</div>
+      <div class="mc-ds">Kata kerja: makan, minum, memasak, dll.</div>
+    </button>
+  </div>
+</div>
+
+<!-- ISIM -->
+<div id="s-isim" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-materi')">← Kembali</button>
+    <div class="hdrtit">الأَسْمَاء <small>Mufrodat Isim</small></div>
+  </div>
+  <div class="itxt">Isim (اِسْم) adalah kata benda. Klik kartu untuk melihat detail.</div>
+  <div class="vtbs">
+    <button class="vtab on" onclick="filterIsim('all',this)">Semua</button>
+    <button class="vtab" onclick="filterIsim('makanan',this)">🍽️ Makanan</button>
+    <button class="vtab" onclick="filterIsim('minuman',this)">🥤 Minuman</button>
+    <button class="vtab" onclick="filterIsim('peralatan',this)">🍴 Peralatan</button>
+  </div>
+  <div class="vgrid" id="isim-grid"></div>
+</div>
+
+<!-- FIIL -->
+<div id="s-fiil" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-materi')">← Kembali</button>
+    <div class="hdrtit">الأَفْعَال <small>Mufrodat Fi'il</small></div>
+  </div>
+  <div class="itxt">Fi'il (فِعْل) adalah kata kerja. Berikut fi'il seputar aktivitas makan dan minum beserta contoh kalimat.</div>
+  <div class="fgrid" id="fiil-grid"></div>
+</div>
+
+<!-- LATIHAN -->
+<div id="s-latihan" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-home')">← Kembali</button>
+    <div class="hdrtit">التَّمْرِينَات <small>Latihan Soal</small></div>
+  </div>
+  <div class="lwrap">
+    <button class="lch" onclick="go('s-pg')">
+      <div class="lci">🖼️</div>
+      <div class="lcar">اِخْتَرِ الْمُفْرَدَة</div>
+      <div class="lcid">Pilihan Ganda</div>
+      <div class="lcds">Pilih mufrodat sesuai gambar</div>
+      <div class="lcbg">10 Soal</div>
+    </button>
+    <button class="lch" onclick="go('s-susun')">
+      <div class="lci">🧩</div>
+      <div class="lcar">رَتِّب الْجُمْلَة</div>
+      <div class="lcid">Susun Kalimat</div>
+      <div class="lcds">Lengkapi bagian kalimat kosong</div>
+      <div class="lcbg">8 Soal</div>
+    </button>
+  </div>
+</div>
+
+<!-- PG -->
+<div id="s-pg" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-latihan')">← Kembali</button>
+    <div class="hdrtit">اِخْتَرِ الْمُفْرَدَة <small>Pilihan Ganda</small></div>
+  </div>
+  <div class="qwrap" id="pg-box"></div>
+</div>
+
+<!-- SUSUN -->
+<div id="s-susun" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="go('s-latihan')">← Kembali</button>
+    <div class="hdrtit">رَتِّب الْجُمْلَة <small>Susun Kalimat</small></div>
+  </div>
+  <div class="qwrap" id="susun-box"></div>
+</div>
+
+<!-- GAME -->
+<div id="s-game" class="screen">
+  <div class="hdr">
+    <button class="back" onclick="exitGame()">← Kembali</button>
+    <div class="hdrtit">🎮 <small>Mini Game: Lorong Arah</small></div>
+  </div>
+  <div id="gwrap"></div>
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="mbox">
+    <div id="mc"></div>
+    <button class="mcls" onclick="closeModal()">Tutup</button>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
