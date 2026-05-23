@@ -42,16 +42,16 @@ const FIIL=[
   {ar:'غَسَلَ',lat:'ghasala',id:'Mencuci',em:'🫧',forms:[{ar:'يَغْسِلُ',lb:'Mudhari'},{ar:'اِغْسِلْ',lb:'Amar'}],contoh:'يَغْسِلُ مُحَمَّدٌ الأَطْبَاقَ بَعْدَ الأَكْلِ.',tr:'Muhammad mencuci piring setelah makan.'},
 ];
 const PGQ=[
-  {img:'img/aruz.png',em:'🍚',cor:'أَرُزّ',opts:['أَرُزّ','خُبْز','سَمَك','بَيْض'],hint:'Makanan pokok Asia dari beras.'},
-  {img:'img/qahwa.png',em:'☕',cor:'قَهْوَة',opts:['شَاي','قَهْوَة','حَلِيب','مَاء'],hint:'Minuman hitam panas dari biji sangrai.'},
-  {img:'img/shay.png',em:'🍵',cor:'شَاي',opts:['شَاي','قَهْوَة','عَصِير','شَرَاب'],hint:'Minuman dari daun kering yang diseduh.'},
-  {img:'img/halib.png',em:'🥛',cor:'حَلِيب',opts:['مَاء','عَصِير','حَلِيب','شَاي'],hint:'Minuman putih kaya kalsium.'},
-  {img:'img/lahm.png',em:'🥩',cor:'لَحْم',opts:['دَجَاج','سَمَك','لَحْم','بَيْض'],hint:'Daging merah dari sapi atau kambing.'},
-  {img:'img/milaqah.png',em:'🥄',cor:'مِلْعَقَة',opts:['شَوْكَة','سِكِّين','مِلْعَقَة','كُوب'],hint:'Alat makan cekungan untuk menyendok.'},
-  {img:'img/fakiha.png',em:'🍎',cor:'فَاكِهَة',opts:['خُضَار','فَاكِهَة','حَلْوَى','سَلَطَة'],hint:'Tumbuhan manis yang bisa langsung dimakan.'},
-  {img:'img/maa.png',em:'💧',cor:'مَاء',opts:['عَصِير','شَرَاب','حَلِيب','مَاء'],hint:'Cairan bening paling penting untuk kehidupan.'},
-  {img:'img/milh.png',em:'🧂',cor:'مِلْح',opts:['زَيْت','مِلْح','حَلْوَى','جُبْن'],hint:'Bumbu dasar masakan berwarna putih.'},
-  {img:'img/bayd.png',em:'🥚',cor:'بَيْض',opts:['بَيْض','دَجَاج','لَحْم','سَمَك'],hint:'Dihasilkan unggas, bisa digoreng atau direbus.'},
+  {img:'./img/aruz.png',em:'🍚',cor:'أَرُزّ',opts:['أَرُزّ','خُبْز','سَمَك','بَيْض'],hint:'Makanan pokok Asia dari beras.'},
+  {img:'./img/qahwa.png',em:'☕',cor:'قَهْوَة',opts:['شَاي','قَهْوَة','حَلِيب','مَاء'],hint:'Minuman hitam panas dari biji sangrai.'},
+  {img:'./img/shay.png',em:'🍵',cor:'شَاي',opts:['شَاي','قَهْوَة','عَصِير','شَرَاب'],hint:'Minuman dari daun kering yang diseduh.'},
+  {img:'./img/halib.png',em:'🥛',cor:'حَلِيب',opts:['مَاء','عَصِير','حَلِيب','شَاي'],hint:'Minuman putih kaya kalsium.'},
+  {img:'./img/lahm.png',em:'🥩',cor:'لَحْم',opts:['دَجَاج','سَمَك','لَحْم','بَيْض'],hint:'Daging merah dari sapi atau kambing.'},
+  {img:'./img/milaqah.png',em:'🥄',cor:'مِلْعَقَة',opts:['شَوْكَة','سِكِّين','مِلْعَقَة','كُوب'],hint:'Alat makan cekungan untuk menyendok.'},
+  {img:'./img/fakiha.png',em:'🍎',cor:'فَاكِهَة',opts:['خُضَار','فَاكِهَة','حَلْوَى','سَلَطَة'],hint:'Tumbuhan manis yang bisa langsung dimakan.'},
+  {img:'./img/maa.png',em:'💧',cor:'مَاء',opts:['عَصِير','شَرَاب','حَلِيب','مَاء'],hint:'Cairan bening paling penting untuk kehidupan.'},
+  {img:'./img/milh.png',em:'🧂',cor:'مِلْح',opts:['زَيْت','مِلْح','حَلْوَى','جُبْن'],hint:'Bumbu dasar masakan berwarna putih.'},
+  {img:'./img/bayd.png',em:'🥚',cor:'بَيْض',opts:['بَيْض','دَجَاج','لَحْم','سَمَك'],hint:'Dihasilkan unggas, bisa digoreng atau direbus.'},
 ];
 const SUSUNQ=[
   {tmpl:['يَأْكُلُ','_A_','الأَرُزَّ','فِي','_B_'],blanks:{_A_:'الطَّالِبُ',_B_:'الْمَطْعَمِ'},choices:['الطَّالِبُ','الأُمُّ','الْمَطْعَمِ','الْبَيْتِ'],tr:'Siswa makan nasi di restoran.',hint:'Subjek: الطَّالِبُ (siswa), tempat: الْمَطْعَمِ'},
